@@ -92,6 +92,10 @@ nav li._active {
     position: static;
     transition: all 0.3s ease-in;
     opacity: 100%;
+
+    a {
+      white-space: wrap;
+    }
   }
 
   a._navlink.active_navlink ~ ._subsubnavlink-container {

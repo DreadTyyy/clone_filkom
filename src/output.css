@@ -3107,6 +3107,11 @@
       height: 100vh;
     }
   }
+  .lg\:max-h-0 {
+    @media (width >= 64rem) {
+      max-height: calc(var(--spacing) * 0);
+    }
+  }
   .lg\:min-h-\[500px\] {
     @media (width >= 64rem) {
       min-height: 500px;
