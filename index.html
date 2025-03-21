@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="./src/main.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Archivo:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet" />
+
+    <script
+      src="https://kit.fontawesome.com/b6c31f24e6.js"
+      crossorigin="anonymous"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body class="font-archivo">
+    <div id="container_language" class="z-[999999] hidden">
+      <div id="wrapper_language" class="py-2 bg-white w-[140px]">
+        <div class="cursor-pointer flex mx-4 py-2 items-center gap-0.5 text-[10px] -tracking-1 border-b border-[#eaeaea] text-secondary hover:text-primary">
+          <img src="assets/en.svg" alt="english" class="h-3" />
+          English
+        </div>
+        <div class="cursor-pointer flex mx-4 py-2 items-center gap-0.5 text-[10px] -tracking-1 border-b border-[#eaeaea] text-secondary hover:text-primary">
+          <img src="assets/id.svg" alt="indonesia" class="h-3" />
+          Indonesian
+        </div>
+      </div>
+    </div>
+    <div
+      class="lg:flex hidden px-[8%] bg-dark-primary h-9 justify-between items-center">
+      <ul class="pt-[5px] pb-2.5 flex text-white gap-4 text-[12px] -tracking-1">
+        <li>
+          <a href="http://ub.ac.id/">UB Official</a>
+        </li>
+        <li>
+          <a href="http://mail.ub.ac.id/">Webmail UB</a>
+        </li>
+        <li>
+          <a href="http://prasetya.ub.ac.id/">UB News</a>
+        </li>
+        <li>
+          <a href="https://bits.ub.ac.id/">BITS</a>
+        </li>
+        <li class="z-[99999] group relative h-full max-h-fit">
+          <p class="-tracking-1 cursor-pointer hover:text-dark-500">QUICK LINKS</p>
+          <div class="py-1 text-[10px] absolute overflow-hidden top-full left-0 w-[120px] bg-dark-800 opacity-0 max-h-0 lg:-translate-y-1.5 group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-1 group-hover:max-h-screen duration-300 ease-in">
+            <a href="https://bits.ub.ac.id/" class="block px-1.5 py-1 hover:bg-secondary w-full">Filkom Apps</a>
+            <a href="http://halofilkom.ub.ac.id/" class="block px-1.5 py-1 hover:bg-secondary w-full">Halo FILKOM</a>
+            <a href="https://brone.ub.ac.id/" class="block px-1.5 py-1 hover:bg-secondary w-full">BRONE</a>
+            <a href="https://filkom.ub.ac.id/mbkm/" class="block px-1.5 py-1 hover:bg-secondary w-full">MBKM FILKOM</a>
+            <a
+              href="https://filkom.ub.ac.id/pendidikan/layanan-akademik-filkom-ub/"
+              class="block px-1.5 py-1 hover:bg-secondary w-full"
+              >Portal Info Akdemik</a
+            >
+            <a
+              href="https://filkom.ub.ac.id/kemahasiswaan/layanan-kemahasiswaan/"
+              class="block px-1.5 py-1 hover:bg-secondary w-full" 
+              >Portal Kemahasiswaan</a
+            >
+          </div>
+        </li>
+        <li>
+          <button id="btn_language" class="cursor-pointer flex items-center gap-0.5 text-[10px] -tracking-1">
+            <img src="assets/id.svg" alt="indonesia" class="h-3" />
+            Indonesian &#9662;
+          </button>
+        </li>
+      </ul>
+      <div class="flex gap-4">
+        <input
+          name="search"
+          id="search"
+          type="text"
+          placeholder="Search..."
+          class="bg-white h-8 text-[12px] px-3 w-[200px]" />
+        <div
+          class="flex items-center bg-secondary text-[14px] px-4 rounded-[4px]">
+          <p class="text-dark-primary">FILKOM Apps</p>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="z-[9999] lg:px-[8%] md:px-4 px-2 lg:sticky top-0 h-16 w-full max-w-screen bg-primary lg:overflow-visible overflow-hidden">
+      <div class="flex justify-between items-center h-full">
+        <img src="assets/logo ub.png" alt="logo filkom ub" class="h-10" />
+        <ul id="navigation_link"
+          class="z-[9999] lg:static lg:overflow-visible overflow-auto fixed lg:h-full lg:pt-0 pt-6 h-screen min-w-[360px] bg-primary flex lg:flex-row flex-col top-0 -right-full font-archivo gap-[1px] duration-500 ease-in">
+          <div id="close_nav" class="hidden z-[99999] text-white text-[32px] absolute right-4 top-2">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <li
+            class="_active group relative lg:border-none border-b border-white lg:h-full">
+            <a
+              href="/"
+              class="flex justify-between items-center lg:px-2 px-4 py-4 text-white h-full lg:leading-[64px] -tracking-2"
+              >Home</a
+            >
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+          </li>
+          <li
+            class="group relative bg-transparent lg:border-none border-b border-white h-full max-h-fit hover:bg-dark-800">
+            <a
+              href="#"
+              class="_navlink flex justify-between items-center lg:px-2 px-4 py-4 text-white lg:h-full h-fit lg:leading-[64px] -tracking-2"
+              >Profil
+              <span class="lg:hidden block">
+                <i
+                  class="fa-solid fa-chevron-down text-white text-normal font-semibold duration-200"></i>
+              </span>
+            </a>
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+            <ul
+              class="_subnavlink-container lg:pl-0 pl-4 pt-1 absolute overflow-hidden top-full left-0 lg:bg-dark-primary bg-primary max-w-screen opacity-0 max-h-0 lg:-translate-y-4 lg:text-normal text-smnormal group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-screen">
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Sejarah</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Visi, Misi dan Tujuan</a
+                >
+              </li>
+              <li class="group/item relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  Manajemen, Struktur, dan OTK
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 left-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item:max-w-[1000px] group-hover/item:overflow-visible group-hover/item:opacity-100 group-hover/item:translate-x-0 duration-100 ease-in">
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Struktur Organisasi</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Pimpinan Fakultas</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Struktur Senat Fakultas</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Manajemen Tata Usaha</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Unit Etik</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="group/item relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  <div>
+                    <i class="fa-solid fa-user-group mr-2"></i>
+                    Sumber Daya Manusia
+                  </div>
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 left-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item:max-w-[1000px] group-hover/item:overflow-visible group-hover/item:opacity-100 group-hover/item:translate-x-0 duration-100 ease-in">
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Dosen</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Tenaga Kependidikan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Kalender Akademik</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Daftar Fasilitas</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Dokumen Resmi</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Status Akreditasi Program Studi</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            class="group relative bg-transparent lg:border-none border-b border-white h-full max-h-fit hover:bg-dark-800">
+            <a
+              href="#"
+              class="_navlink flex justify-between items-center lg:px-2 px-4 py-4 text-white lg:h-full h-fit lg:leading-[64px] -tracking-2"
+              >Pendidikan
+              <span class="lg:hidden block">
+                <i
+                  class="fa-solid fa-chevron-down text-white text-normal font-semibold duration-200"></i>
+              </span>
+            </a>
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+            <ul
+              class="_subnavlink-container lg:pl-0 pl-4 pt-1 absolute overflow-hidden top-full left-0 lg:bg-dark-primary bg-primary max-w-screen opacity-0 max-h-0 lg:-translate-y-4 lg:text-normal text-smnormal group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-screen">
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Sistem Pendidikan</a
+                >
+              </li>
+              <li class="group/item relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  Departemen dan Program Studi
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 left-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item:max-w-[1000px] group-hover/item:overflow-visible group-hover/item:opacity-100 group-hover/item:translate-x-0 duration-100 ease-in">
+                  <li
+                    class="group/item2 relative w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="_navlink flex justify-between gap-1 items-center whitespace-nowrap lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white">
+                      Departemen Teknik Informatika
+                      <span>
+                        <i
+                          class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item2:translate-x-1 duration-200"></i>
+                      </span>
+                    </a>
+                    <ul
+                      class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 left-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item2:max-w-[1000px] group-hover/item2:overflow-visible group-hover/item2:opacity-100 group-hover/item2:translate-x-0 duration-100 ease-in">
+                      <li class="w-full border-b border-primary">
+                        <a
+                          href="#"
+                          class="block lg:p-2.5 p-4 ml-4 hover:bg-secondary text-white whitespace-nowrap"
+                          >Program Studi Magister Teknik Komputer</a
+                        >
+                      </li>
+                      <li class="w-full border-b border-primary">
+                        <a
+                          href="#"
+                          class="block lg:p-2.5 p-4 ml-4 hover:bg-secondary text-white whitespace-nowrap"
+                          >Program Studi Sarjana Teknik Informatika</a
+                        >
+                      </li>
+                      <li class="w-full border-b border-primary">
+                        <a
+                          href="#"
+                          class="block lg:p-2.5 p-4 ml-4 hover:bg-secondary text-white whitespace-nowrap"
+                          >Program Studi Sarjana Teknik Komputer</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="group/item2 relative w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap">
+                      Departemen Sistem Informasi
+                      <span>
+                        <i
+                          class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item2:translate-x-1 duration-200"></i>
+                      </span>
+                    </a>
+                    <ul
+                      class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 left-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item2:max-w-[1000px] group-hover/item2:overflow-visible group-hover/item2:opacity-100 group-hover/item2:translate-x-0 duration-100 ease-in">
+                      <li class="w-full border-b border-primary">
+                        <a
+                          href="#"
+                          class="block lg:p-2.5 p-4 ml-4 hover:bg-secondary text-white whitespace-nowrap"
+                          >Program Studi Sarjana Sistem Informasi</a
+                        >
+                      </li>
+                      <li class="w-full border-b border-primary">
+                        <a
+                          href="#"
+                          class="block lg:p-2.5 p-4 ml-4 hover:bg-secondary text-white whitespace-nowrap"
+                          >Program Studi Sarjana Teknologi Informasi</a
+                        >
+                      </li>
+                      <li class="w-full border-b border-primary">
+                        <a
+                          href="#"
+                          class="block lg:p-2.5 p-4 ml-4 hover:bg-secondary text-white whitespace-nowrap"
+                          >Program Studi Sarjana Pendidikan Teknologi
+                          Informasi</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Pedoman Akademik</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >
+                  <span>
+                    <i class="fa-solid fa-circle-info mr-2"></i>
+                  </span>
+                  Prosedur dan Layanan Akademik</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Kalender Akademik</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Jadwal Kuliah</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Merdeka Belajar-Kampus Merdeka</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Data Lulusan</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Informasi Pendaftaran</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            class="group relative bg-transparent lg:border-none border-b border-white h-full max-h-fit hover:bg-dark-800">
+            <a
+              href="#"
+              class="_navlink flex justify-between items-center lg:px-2 px-4 py-4 text-white lg:h-full h-fit lg:leading-[64px] -tracking-2"
+              >Penelitian dan Pengabdian
+              <span class="lg:hidden block">
+                <i
+                  class="fa-solid fa-chevron-down text-white text-normal font-semibold duration-200"></i>
+              </span>
+            </a>
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+            <ul
+              class="_subnavlink-container lg:pl-0 pl-4 pt-1 absolute overflow-hidden top-full left-0 lg:bg-dark-primary bg-primary max-w-screen opacity-0 max-h-0 lg:-translate-y-4 lg:text-normal text-smnormal group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-screen">
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Struktur BPPM</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Panduan Penelitian & Pengabdian</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Laboratorium dan Grup Riset</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Kerjasama</a
+                >
+              </li>
+              <li class="group/item relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  Hasil Penelitian & Pengabdian
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 left-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item:max-w-[1000px] group-hover/item:overflow-visible group-hover/item:opacity-100 group-hover/item:translate-x-0 duration-100 ease-in">
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Hasil Penelitian</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Hasil Pengabdian</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 lg:ml-0 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >HKI & Paten</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Jurnal, Seminar dan Konferensi</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Industri dan Kemasyarakatan</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            class="group relative bg-transparent lg:border-none border-b border-white h-full max-h-fit hover:bg-dark-800">
+            <a
+              href="#"
+              class="_navlink flex justify-between items-center lg:px-2 px-4 py-4 text-white lg:h-full h-fit lg:leading-[64px] -tracking-2"
+              >Jaminan Mutu
+              <span class="lg:hidden block">
+                <i
+                  class="fa-solid fa-chevron-down text-white text-normal font-semibold duration-200"></i>
+              </span>
+            </a>
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+            <ul
+              class="_subnavlink-container lg:pl-0 pl-4 pt-1 absolute overflow-hidden top-full left-0 lg:bg-dark-primary bg-primary max-w-screen opacity-0 max-h-0 lg:-translate-y-4 lg:text-normal text-smnormal group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-screen">
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Organisasi Penjaminan Mutu</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Rencana Strategis (RENSTRA)</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Program Kerja</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Tinjauan Manajemen</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >AIM (Audit Internal Mutu)</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Standar Operasional Prosedur (SOP)</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Indeks Kepuasan Masyarakat (IKM)</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Laporan Tracer Study</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Laporan Kinerja Tahunan</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            class="group relative bg-transparent lg:border-none border-b border-white h-full max-h-fit hover:bg-dark-800">
+            <a
+              href="#"
+              class="_navlink flex justify-between items-center lg:px-2 px-4 py-4 text-white lg:h-full h-fit lg:leading-[64px] -tracking-2"
+              >Kemahasiswaan
+              <span class="lg:hidden block">
+                <i
+                  class="fa-solid fa-chevron-down text-white text-normal font-semibold duration-200"></i>
+              </span>
+            </a>
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+            <ul
+              class="_subnavlink-container lg:pl-0 pl-4 pt-1 absolute overflow-hidden top-full left-0 lg:bg-dark-primary bg-primary max-w-screen opacity-0 max-h-0 lg:-translate-y-4 lg:text-normal text-smnormal group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-screen">
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Organisasi Kemahasiswaan</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Prestasi Mahasiswa</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Informasi Beasiswa</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Informasi Yudisium</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Informasi Wisuda</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Data Alumni</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Info Alumni</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >
+                  <span>
+                    <i class="fa-solid fa-circle-info mr-2"></i>
+                  </span>
+                  Layanan Kemahasiswaan</a
+                >
+              </li>
+              <li class="group/item2 relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  Bimbingan dan Konseling
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item2:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 left-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item2:max-w-[1000px] group-hover/item2:overflow-visible group-hover/item2:opacity-100 group-hover/item2:translate-x-0 duration-100 ease-in">
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Bimbingan dan Konseling di FILKOM</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Layanan Bimbingan dan Konseling</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Gallery</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Layanan ULTKSP</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            class="group relative bg-transparent lg:border-none border-b border-white h-full max-h-fit hover:bg-dark-800">
+            <a
+              href="#"
+              class="_navlink flex justify-between items-center lg:px-2 px-4 py-4 text-white lg:h-full h-fit lg:leading-[64px] -tracking-2"
+              >Informasi
+              <span class="lg:hidden block">
+                <i
+                  class="fa-solid fa-chevron-down text-white text-normal font-semibold duration-200"></i>
+              </span>
+            </a>
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+            <ul
+              class="_subnavlink-container lg:pl-0 pl-4 pt-1 absolute overflow-hidden top-full left-0 lg:bg-dark-primary bg-primary max-w-screen opacity-0 max-h-0 lg:-translate-y-4 lg:text-normal text-smnormal group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-screen">
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Zona Integritas</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >SDG (Sustainable Development Goals)</a
+                >
+              </li>
+              <li class="group/item2 relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  Statistik
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item2:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 right-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item2:max-w-[1000px] group-hover/item2:overflow-visible group-hover/item2:opacity-100 group-hover/item2:translate-x-0 duration-100 ease-in">
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Tendik dan Dosen</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Mahasiswa</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="group/item2 relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  Informasi Publik
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item2:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 right-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item2:max-w-[1000px] group-hover/item2:overflow-visible group-hover/item2:opacity-100 group-hover/item2:translate-x-0 duration-100 ease-in">
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Informasi yang Wajib Tersedia Setiap Saat</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Informasi Publik Yang Wajib Disediakan Dan Diumumkan
+                      Secara Berkala</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Informasi yang Wajib Diumumkan Secara Serta-merta</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Daftar Informasi Publik</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Daftar Informasi Dikecualikan</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Pengadaan Barang dan Jasa</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Keuangan</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Statistik Layanan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="group/item2 relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  Produsedur Informasi Publik
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item2:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 right-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item2:max-w-[1000px] group-hover/item2:overflow-visible group-hover/item2:opacity-100 group-hover/item2:translate-x-0 duration-100 ease-in">
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Permohonan Informasi Publik</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Pengajuan Keberata Informasi Publik</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Surat Edaran</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Pengumuman</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Berita</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Apresiasi Tridharma</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Events</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Lowongan</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            class="group relative bg-transparent lg:border-none border-b border-white h-full max-h-fit hover:bg-dark-800">
+            <a
+              href="#"
+              class="_navlink flex justify-between items-center lg:px-2 px-4 py-4 text-white lg:h-full h-fit lg:leading-[64px] -tracking-2"
+              >Layanan
+              <span class="lg:hidden block">
+                <i
+                  class="fa-solid fa-chevron-down text-white text-normal font-semibold duration-200"></i>
+              </span>
+            </a>
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+            <ul
+              class="_subnavlink-container lg:pl-0 pl-4 pt-1 absolute overflow-hidden top-full left-0 lg:bg-dark-primary bg-primary max-w-screen opacity-0 max-h-0 lg:-translate-y-4 lg:text-normal text-smnormal group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-screen">
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Fasilitas dan Sarana Prasarana</a
+                >
+              </li>
+              <li class="group/item2 relative w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="_navlink flex justify-between gap-1 items-center lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap">
+                  Prosedur Pelayanan
+                  <span>
+                    <i
+                      class="fa-solid fa-chevron-right text-white lg:text-[8px] text-normal lg:font-normal font-semibold lg:rotate-0 rotate-90 group-hover/item2:translate-x-1 duration-200"></i>
+                  </span>
+                </a>
+                <ul
+                  class="_subsubnavlink-container lg:pt-1 absolute overflow-hidden -top-1 right-full lg:bg-dark-primary bg-dark lg:max-w-0 lg:h-auto h-0 opacity-0 lg:-translate-x-4 lg:text-normal text-smnormal group-hover/item2:max-w-[1000px] group-hover/item2:overflow-visible group-hover/item2:opacity-100 group-hover/item2:translate-x-0 duration-100 ease-in">
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Layanan Deteksi Plagiasi</a
+                    >
+                  </li>
+                  <li class="w-full border-b border-primary">
+                    <a
+                      href="#"
+                      class="block lg:p-2.5 p-4 ml-2 hover:bg-secondary text-white whitespace-nowrap"
+                      >Pelayanan Umum</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Surat Edaran</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Ruang Baca</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >FILKOM Apps</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Aplikasi BIMO</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Portal Pembelajaran</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Konfigurasi Ujian SEB</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Maklumat Pelayanan</a
+                >
+              </li>
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Maklumat Aksesibilitas Website</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            class="group relative bg-transparent lg:border-none border-b border-white h-full max-h-fit hover:bg-dark-800">
+            <a
+              href="#"
+              class="_navlink flex justify-between items-center lg:px-2 px-4 py-4 text-white lg:h-full h-fit lg:leading-[64px] -tracking-2"
+              >Kontak
+              <span class="lg:hidden block">
+                <i
+                  class="fa-solid fa-chevron-down text-white text-normal font-semibold duration-200"></i>
+              </span>
+            </a>
+            <div
+              class="lg:block hidden absolute bottom-[12px] left-1/2 -translate-x-1/2 h-[3px] w-[80%] bg-primary scale-x-0 origin-left group-hover:scale-x-100 duration-200 ease-in"></div>
+            <ul
+              class="_subnavlink-container lg:pl-0 pl-4 pt-1 absolute overflow-hidden top-full right-0 lg:bg-dark-primary bg-primary max-w-screen opacity-0 max-h-0 lg:-translate-y-4 lg:text-normal text-smnormal group-hover:overflow-visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-screen">
+              <li class="w-full border-b border-primary">
+                <a
+                  href="#"
+                  class="block lg:p-2.5 p-4 hover:bg-secondary text-white whitespace-nowrap"
+                  >Alamat dan Narahubung</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div id="hamburger" class="lg:hidden block text-white text-normal bg-secondary py-2 px-3 rounded-[4px]">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div
+        class="swiper mySwiper relative lg:h-screen md:h-[450px] h-[240px] w-full overflow-hidden">
+        <div class="swiper-wrapper h-full">
+          <div class="swiper-slide h-full">
+            <a href="#" class="group block cursor-pointer h-full">
+              <div
+                class="absolute z-[99] md:top-24 top-[10%] md:left-0 left-4 px-3 py-1.5 bg-secondary text-white text-center font-archivo">
+                <p class="text-2xl font-bold leading-[1]">14</p>
+                <span class="text-[13px] leading-[0.5]">Feb</span>
+              </div>
+              <img
+                class="-z-10 h-full w-full object-cover group-hover:rotate-3 group-hover:scale-110 group-hover:opacity-80 duration-300"
+                src="assets/Pengumuman-Pemenang-PILMAPRES-2025.webp"
+                alt="Pengumuman-Pemenang-PILMAPRES-2025" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="group block cursor-pointer h-full">
+              <div
+                class="absolute z-[99] md:top-24 top-[10%] md:left-0 left-4 px-3 py-1.5 bg-secondary text-white text-center font-archivo">
+                <p class="text-2xl font-bold leading-[1]">17</p>
+                <span class="text-[13px] leading-[0.5]">Feb</span>
+              </div>
+              <img
+                class="-z-10 h-full w-full object-cover group-hover:rotate-3 group-hover:scale-110 group-hover:opacity-80 duration-300"
+                src="assets/registrasi-akademik-genap-24-25-scaled.webp"
+                alt="registrasi-akademik-genap-24-25" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="group block cursor-pointer h-full">
+              <div
+                class="absolute z-[99] md:top-24 top-[10%] md:left-0 left-4 px-3 py-1.5 bg-secondary text-white text-center font-archivo">
+                <p class="text-2xl font-bold leading-[1]">8</p>
+                <span class="text-[13px] leading-[0.5]">Jan</span>
+              </div>
+              <img
+                class="-z-10 h-full w-full object-cover group-hover:rotate-3 group-hover:scale-110 group-hover:opacity-80 duration-300"
+                src="assets/diesUB62-scaled-e1736315258601.webp"
+                alt="diesUB62" />
+            </a>
+          </div>
+        </div>
+        <div
+          class="swiper-button-next"
+          style="
+            color: #fff;
+            font-weight: bold;
+            font-size: 2px;
+            right: 16px;
+            --swiper-navigation-size: 24px;
+          "></div>
+        <div
+          class="swiper-button-prev"
+          style="
+            color: #fff;
+            font-weight: bold;
+            font-size: 2px;
+            left: 16px;
+            --swiper-navigation-size: 24px;
+          "></div>
+      </div>
+      <div
+        class="flex md:py-0 py-2 md:flex-row flex-col justify-center items-center gap-4 md:h-14 h-full bg-quartenary text-[12px]">
+        <a
+          href="#"
+          class="md:py-4 py-0 px-4 uppercase text-white hover:text-secondary duration-300">
+          <span class="text-secondary">Program Studi</span>
+          <span>di Filkom</span>
+        </a>
+        <a
+          href="#"
+          class="md:py-4 py-0 px-4 uppercase text-white hover:text-secondary duration-300">
+          <span>Portal</span> <span class="text-secondary">Brone</span>
+        </a>
+        <a
+          href="#"
+          class="md:py-4 py-0 px-4 uppercase text-white hover:text-secondary duration-300">
+          <span class="text-secondary">Halo</span> <span>Filkom</span>
+        </a>
+        <a
+          href="#"
+          class="md:py-4 py-0 px-4 uppercase text-white hover:text-secondary duration-300">
+          <span class="text-secondary">Zona</span> <span>Integritas</span>
+        </a>
+      </div>
+      <div class="p-2 md:hidden block">
+        <a href="#" class="flex justify-center items-center gap-3 text-white -tracking-1 bg-[#d9534f] px-5 py-2.5">
+          Filkom Apps
+          <span>
+            <svg enable-background="new 0 0 32 32" height="20px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="grid-2"><path d="M10.246,4.228c0-0.547-0.443-0.991-0.99-0.991H3.914c-0.548,0-0.991,0.443-0.991,0.991V9.57   c0,0.546,0.443,0.99,0.991,0.99h5.342c0.547,0,0.99-0.444,0.99-0.99V4.228z" fill="#fff"/><path d="M19.453,4.228c0-0.547-0.443-0.991-0.991-0.991h-5.343c-0.546,0-0.99,0.443-0.99,0.991V9.57   c0,0.546,0.444,0.99,0.99,0.99h5.343c0.548,0,0.991-0.444,0.991-0.99V4.228z" fill="#fff"/><path d="M28.868,4.228c0-0.547-0.443-0.991-0.99-0.991h-5.342c-0.548,0-0.991,0.443-0.991,0.991V9.57   c0,0.546,0.443,0.99,0.991,0.99h5.342c0.547,0,0.99-0.444,0.99-0.99V4.228z" fill="#fff"/><path d="M10.246,13.224c0-0.547-0.443-0.99-0.99-0.99H3.914c-0.548,0-0.991,0.443-0.991,0.99v5.342   c0,0.549,0.443,0.99,0.991,0.99h5.342c0.547,0,0.99-0.441,0.99-0.99V13.224z" fill="#fff"/><path d="M19.453,13.224c0-0.547-0.443-0.99-0.991-0.99h-5.343c-0.546,0-0.99,0.443-0.99,0.99v5.342   c0,0.549,0.444,0.99,0.99,0.99h5.343c0.548,0,0.991-0.441,0.991-0.99V13.224z" fill="#fff"/><path d="M28.868,13.224c0-0.547-0.443-0.99-0.99-0.99h-5.342c-0.548,0-0.991,0.443-0.991,0.99v5.342   c0,0.549,0.443,0.99,0.991,0.99h5.342c0.547,0,0.99-0.441,0.99-0.99V13.224z" fill="#fff"/><path d="M10.246,22.43c0-0.545-0.443-0.99-0.99-0.99H3.914c-0.548,0-0.991,0.445-0.991,0.99v5.344   c0,0.547,0.443,0.99,0.991,0.99h5.342c0.547,0,0.99-0.443,0.99-0.99V22.43z" fill="#fff"/><path d="M19.453,22.43c0-0.545-0.443-0.99-0.991-0.99h-5.343c-0.546,0-0.99,0.445-0.99,0.99v5.344   c0,0.547,0.444,0.99,0.99,0.99h5.343c0.548,0,0.991-0.443,0.991-0.99V22.43z" fill="#fff"/><path d="M28.868,22.43c0-0.545-0.443-0.99-0.99-0.99h-5.342c-0.548,0-0.991,0.445-0.991,0.99v5.344   c0,0.547,0.443,0.99,0.991,0.99h5.342c0.547,0,0.99-0.443,0.99-0.99V22.43z" fill="#fff"/></g></svg>
+          </span>
+        </a>
+      </div>
+    </header>
+    <div class="lg:px-[8%] md:px-4 px-2 pt-13 pb-4 bg-tertiary">
+      <div class="grid md:grid-cols-5 grid-cols-2 gap-6">
+        <div
+          class="group w-full border-[3px] border-white overflow-hidden shadow-sm inset-shadow-lg inset-shadow-black">
+          <a href="#" class="relative h-full w-full">
+            <img
+              src="assets/mahasiswa.jpg"
+              alt="mahasiswa"
+              loading="lazy"
+              class="w-full brightness-50 group-hover:scale-110 group-hover:brightness-[0.6] duration-300 ease-in" />
+            <p
+              class="absolute bottom-6 left-6 text-2xl font-oswald text-white -tracking-1 group-hover:bottom-10 duration-300 ease-in">
+              Mahasiswa
+            </p>
+          </a>
+        </div>
+        <div
+          class="group w-full border-[3px] border-white overflow-hidden shadow-sm inset-shadow-lg inset-shadow-black">
+          <a href="#" class="relative h-full w-full">
+            <img
+              src="assets/dosen.jpg"
+              alt="dosen"
+              loading="lazy"
+              class="w-full brightness-50 group-hover:scale-110 group-hover:brightness-[0.6] duration-300 ease-in" />
+            <p
+              class="absolute bottom-6 left-6 text-2xl font-oswald text-white -tracking-1 group-hover:bottom-10 duration-300 ease-in">
+              Dosen
+            </p>
+          </a>
+        </div>
+        <div
+          class="group w-full border-[3px] border-white overflow-hidden shadow-sm inset-shadow-lg inset-shadow-black">
+          <a href="#" class="relative h-full w-full">
+            <img
+              src="assets/alumni.jpg"
+              alt="alumni"
+              loading="lazy"
+              class="w-full brightness-50 group-hover:scale-110 group-hover:brightness-[0.6] duration-300 ease-in" />
+            <p
+              class="absolute bottom-6 left-6 text-2xl font-oswald text-white -tracking-1 group-hover:bottom-10 duration-300 ease-in">
+              Alumni
+            </p>
+          </a>
+        </div>
+        <div
+          class="group w-full border-[3px] border-white overflow-hidden shadow-sm inset-shadow-lg inset-shadow-black">
+          <a href="#" class="relative h-full w-full">
+            <img
+              src="assets/ortu.webp"
+              alt="orang tua"
+              loading="lazy"
+              class="w-full brightness-50 group-hover:scale-110 group-hover:brightness-[0.6] duration-300 ease-in" />
+            <p
+              class="absolute bottom-6 left-6 text-2xl font-oswald text-white -tracking-1 group-hover:bottom-10 duration-300 ease-in">
+              Ortu
+            </p>
+          </a>
+        </div>
+        <div
+          class="group w-full md:col-span-1 col-span-2 border-[3px] border-white overflow-hidden shadow-sm inset-shadow-lg inset-shadow-black">
+          <a href="#" class="relative h-full w-full">
+            <img
+              src="assets/mitra.webp"
+              alt="mitra"
+              loading="lazy"
+              class="w-full brightness-50 group-hover:scale-110 group-hover:brightness-[0.6] duration-300 ease-in" />
+            <p
+              class="absolute bottom-6 left-6 text-2xl font-oswald text-white -tracking-1 group-hover:bottom-10 duration-300 ease-in">
+              Mitra
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="lg:px-[8%] md:px-4 px-2 my-10 font-roboto">
+      <div class="flex md:flex-row flex-col gap-3">
+        <div class="lg:min-w-[70%] md:min-w-[60%] min-w-full">
+          <div class="px-2.5 pt-4 pb-2.5">
+            <h2
+              class="flex gap-2 p-2.5 text-primary text-3xl font-semibold -tracking-2">
+              <svg
+                class="premium-title-icon premium-svg-nodraw premium-drawable-icon e-font-icon-svg e-fas-bullhorn fill-primary w-10"
+                aria-hidden="true"
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z"></path>
+              </svg>
+              <span>Pengumuman</span>
+            </h2>
+            <div class="my-2 h-[3px] w-full bg-secondary"></div>
+          </div>
+          <article class="flex flex-col justify-between min-h-[80%]">
+            <div>
+              <ul
+                class="md:mt-8 text-normal flex lg:flex-nowrap flex-wrap lg:justify-start justify-center items-center gap-2">
+                <li>
+                  <button
+                    onclick="onTabHandleClick('1')"
+                    class="_button-tabs px-5 py-1.5 bg-secondary text-primary cursor-pointer duration-300 ease-in">
+                    semua pengumuman
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onclick="onTabHandleClick('2')"
+                    class="_button-tabs px-5 py-1.5 bg-primary text-white cursor-pointer duration-300 ease-in">
+                    akademik
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onclick="onTabHandleClick('3')"
+                    class="_button-tabs px-5 py-1.5 bg-primary text-white cursor-pointer duration-300 ease-in">
+                    kemahasiswaan
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onclick="onTabHandleClick('4')"
+                    class="_button-tabs px-5 py-1.5 bg-primary text-white cursor-pointer duration-300 ease-in">
+                    laboratorium
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onclick="onTabHandleClick('5')"
+                    class="_button-tabs px-5 py-1.5 bg-primary text-white cursor-pointer duration-300 ease-in">
+                    Pengumuman
+                  </button>
+                </li>
+              </ul>
+              <div
+                data-tab="tab"
+                class="_tabs flex flex-col gap-2 text-normal mt-6">
+                <div>
+                  <a href="#" class="text-primary font-semibold"
+                    >Pelaksanaan Perkuliahan Secara Daring Selama UTBK 2025</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">17/03/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold"
+                    >Penerimaan Mahasiswa Baru Magister Ilmu Komputer</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">04/03/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold">
+                    Webinar Pelatihan Series – DPKA UB</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">04/03/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold">
+                    Syarat Pengajuan Cetak Satuan Kegiatan Mahasiswa (SKM)</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">03/03/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold">
+                    Penyesuaian Jadwal Kuliah Selama Bulan Ramadhan 1446H /
+                    2025</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">27/02/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold"
+                    >Informasi Pelaksanaan Perkuliahan Semester Genap T. A.
+                    2024/2025 di FILKOM UB</a
+                  >
+                  <p class="pl-4 font-small text-redbrown"></p>
+                </div>
+              </div>
+              <!-- <div
+                data-tab="tab-2"
+                class="_tabs hidden flex-col gap-2 text-normal mt-6">
+                <div>
+                  <a href="#" class="text-primary font-semibold"
+                    >Pelaksanaan Perkuliahan Secara Daring Selama UTBK 2025</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">17/03/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold"
+                    >Penerimaan Mahasiswa Baru Magister Ilmu Komputer</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">04/03/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold">
+                    Webinar Pelatihan Series – DPKA UB</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">04/03/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold">
+                    Syarat Pengajuan Cetak Satuan Kegiatan Mahasiswa (SKM)</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">03/03/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold">
+                    Penyesuaian Jadwal Kuliah Selama Bulan Ramadhan 1446H /
+                    2025</a
+                  >
+                  <p class="pl-4 font-small text-redbrown">27/02/2025</p>
+                </div>
+                <div>
+                  <a href="#" class="text-primary font-semibold"
+                    >Informasi Pelaksanaan Perkuliahan Semester Genap T. A.
+                    2024/2025 di FILKOM UB</a
+                  >
+                  <p class="pl-4 font-small text-redbrown"></p>
+                </div>
+              </div> -->
+            </div>
+            <div class="w-full flex justify-end">
+              <a
+                href="#"
+                class="py-2.5 px-5 w-fit bg-secondary text-small text-primary rounded-[2px]"
+                >Lainnya</a
+              >
+            </div>
+          </article>
+        </div>
+        <div class="lg:min-w-[30%] md:min-w-[40%] min-w-full">
+          <div class="bg-primary px-2.5 pt-4 pb-2.5">
+            <h2
+              class="flex gap-2 p-2.5 text-white text-3xl font-semibold -tracking-2">
+              <svg
+                class="premium-title-icon premium-svg-nodraw premium-drawable-icon e-font-icon-svg e-fas-link fill-white w-10"
+                aria-hidden="true"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path>
+              </svg>
+              <span>Quick links</span>
+            </h2>
+            <div class="my-2 h-[3px] w-full bg-secondary"></div>
+          </div>
+          <article>
+            <div
+              class="bg-secondary text-primary border-b border-b-dark-primary">
+              <a href="#" class="pl-18 py-2.5 block">
+                <h3 class="text-2xl">PROAKSI</h3>
+                <p class="text-normal">Portal Informasi Akademik</p>
+              </a>
+            </div>
+            <div
+              class="bg-secondary text-primary border-b border-b-dark-primary">
+              <a href="#" class="pl-18 py-2.5 block">
+                <h3 class="text-2xl">PORSKI</h3>
+                <p class="text-normal">Portal Layanan Kemahasiswaan</p>
+              </a>
+            </div>
+            <div
+              class="bg-secondary text-primary border-b border-b-dark-primary">
+              <a href="#" class="pl-18 py-2.5 block">
+                <h3 class="text-2xl">PIBEA</h3>
+                <p class="text-normal">Portal Informasi Beasiswa</p>
+              </a>
+            </div>
+            <div
+              class="bg-secondary text-primary border-b border-b-dark-primary">
+              <a href="#" class="pl-18 py-2.5 block">
+                <h3 class="text-2xl">MBKM</h3>
+                <p class="text-normal">Portal Merdeka Belajar FILKOM</p>
+              </a>
+            </div>
+            <div
+              class="bg-secondary text-primary border-b border-b-dark-primary">
+              <a href="#" class="pl-18 py-2.5 block">
+                <h3 class="text-2xl">IRO</h3>
+                <p class="text-normal">International Relation Officer</p>
+              </a>
+            </div>
+          </article>
+          <article class="p-2.5 bg-primary text-white text-normal">
+            <div>
+              <a href="#" class="pl-2.5 py-1 block">
+                FILKOM Virtual Tour
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </a>
+            </div>
+            <div>
+              <a href="#" class="pl-2.5 py-1 block">
+                PORTAL KKN FILKOM
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </a>
+            </div>
+            <div>
+              <a href="#" class="pl-2.5 py-1 block">
+                PORTAL PKKMB FILKOM
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="lg:px-[8%] md:px-4 px-2 my-10 font-roboto">
+      <div class="grid md:grid-cols-4 grid-cols-1 gap-10 text-primary">
+        <div>
+          <a href="#" class="flex gap-7">
+            <i class="fa-regular fa-comment text-4xl"></i>
+            <div>
+              <h3 class="text-2xl">LAPOR.GO.ID</h3>
+              <p class="text-normal">
+                Laporkan Keluhan Pelayanan Publik Di Sini
+              </p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="flex gap-7">
+            <i class="fa-solid fa-handshake text-4xl"></i>
+            <div>
+              <h3 class="text-2xl">SIPPN MENPAN</h3>
+              <p class="text-normal">
+                Sistem Informasi Pelayanan Publik Nasional SIPPN.MENPAN.GO.ID
+              </p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="flex gap-7">
+            <i class="fa-solid fa-chalkboard-user text-4xl"></i>
+            <div>
+              <h3 class="text-2xl">Seleksi Masuk</h3>
+              <p class="text-normal">Selma UB</p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="#" class="flex gap-7">
+            <i class="fa-solid fa-chalkboard-user text-4xl"></i>
+            <div>
+              <h3 class="text-2xl">Direktori</h3>
+              <p class="text-normal">Dosen FILKOM</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="lg:px-[8%] md:px-4 px-2 mt-10 font-roboto bg-primary">
+      <div class="py-8">
+        <div class="px-2.5 pt-4 pb-2.5">
+          <h2
+            class="flex justify-center gap-2 p-2.5 text-white text-3xl font-semibold -tracking-2">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>Berita</span>
+          </h2>
+          <div class="my-2 h-[3px] w-full bg-secondary"></div>
+        </div>
+        <article class="grid lg:grid-cols-2 grid-cols-1 lg:gap-6 gap-16">
+          <div class="group">
+            <div
+              class="w-full max-h-[430px] overflow-hidden border-[3px] border-white cursor-pointer">
+              <img
+                src="assets/berita big.webp"
+                alt="berita big"
+                loading="lazy"
+                class="object-cover w-full group-hover:rotate-3 group-hover:scale-105 group-hover:brightness-80 duration-300 ease-in" />
+            </div>
+            <h4
+              class="text-right text-white font-semibold text-normal -tracking-1 cursor-pointer">
+              Kuliah Tamu Capstone Project Mata Kuliah Komunikasi Publik FILKOM
+              UB: Strategi Membangun Personal Branding Digital
+            </h4>
+            <p class="text-right text-normal text-secondary cursor-pointer">
+              18/03/2025
+            </p>
+          </div>
+          <div class="flex flex-col justify-between gap-6">
+            <div
+              class="group flex md:gap-8 gap-4 justify-between max-h-[120px] w-full">
+              <div
+                class="lg:w-[340px] md:w-[200px] w-[40%] md:max-h-[120px] max-h-[100px] overflow-hidden border-[3px] border-white cursor-pointer">
+                <img
+                  src="assets/berita 1.webp"
+                  alt="berita 1"
+                  loading="lazy"
+                  class="object-cover size-full group-hover:rotate-3 group-hover:scale-105 group-hover:brightness-80 duration-300 ease-in" />
+              </div>
+              <div class="md:w-auto w-[60%]">
+                <h4
+                  class="text-right text-white font-semibold text-normal -tracking-1 cursor-pointer">
+                  Buka Puasa Bersama Keluarga Besar FILKOM UB, Ramadhan 1446 H
+                </h4>
+                <p class="text-right text-normal text-secondary cursor-pointer">
+                  17/03/2025
+                </p>
+              </div>
+            </div>
+            <div class="group flex gap-8 justify-between max-h-[120px] w-full">
+              <div
+                class="lg:w-[340px] md:w-[200px] w-[40%] md:max-h-[120px] max-h-[100px] overflow-hidden border-[3px] border-white cursor-pointer">
+                <img
+                  src="assets/berita 2.webp"
+                  alt="berita 2"
+                  loading="lazy"
+                  class="object-cover size-full group-hover:rotate-3 group-hover:scale-105 group-hover:brightness-80 duration-300 ease-in" />
+              </div>
+              <div class="md:w-auto w-[60%]">
+                <h4
+                  class="text-right text-white font-semibold text-normal -tracking-1 cursor-pointer">
+                  FILKOM dan FT berkontribusi dalam Pertemuan APAN59 dan SOI Asia di Jepang
+                </h4>
+                <p class="text-right text-normal text-secondary cursor-pointer">
+                  14/03/2025
+                </p>
+              </div>
+            </div>
+            <div class="group flex gap-8 justify-between max-h-[120px] w-full">
+              <div
+                class="lg:w-[340px] md:w-[200px] w-[40%] md:max-h-[120px] max-h-[100px] overflow-hidden border-[3px] border-white cursor-pointer">
+                <img
+                  src="assets/berita 3.webp"
+                  alt="berita 3"
+                  loading="lazy"
+                  class="object-cover size-full group-hover:rotate-3 group-hover:scale-105 group-hover:brightness-80 duration-300 ease-in" />
+              </div>
+              <div class="md:w-auto w-[60%]">
+                <h4
+                  class="text-right text-white font-semibold text-normal -tracking-1 cursor-pointer">
+                  FILKOM UB : Sekilas Tentang Gedung Kreativitas Mahasiswa
+                </h4>
+                <p class="text-right text-normal text-secondary cursor-pointer">
+                  11/03/2025
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article
+          class="my-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+          <div>
+            <a href="#" class="text-normal text-white -tracking-1"
+              >Kolaborasi UKLTKSP FILKOM UB dan DWP FILKOM UB: Meningkatkan Kesadaran tentang Sahabat Kampus</a
+            >
+            <p class="pl-6 text-small text-secondary">
+              10/03/2025</p>
+          </div>
+          <div>
+            <a href="#" class="text-normal text-white -tracking-1"
+              >
+              FILKOM UB Adakan Sosialisasi Pengelolaan Talenta dan Jenjang Karir bagi Tendik UB</a
+            >
+            <p class="pl-6 text-small text-secondary">
+              07/03/2025</p>
+          </div>
+          <div>
+            <a href="#" class="text-normal text-white -tracking-1"
+              >
+              FILKOM UB Raih Gelar Juara di NIRC 2025, Padang</a
+            >
+            <p class="pl-6 text-small text-secondary">
+              06/03/2025</p>
+          </div>
+          <div>
+            <a href="#" class="text-normal text-white -tracking-1"
+              >
+              Mahasiswa FILKOM Raih Prestasi pada Mandalika Essay Competition (MEC) ke-6</a
+            >
+            <p class="pl-6 text-small text-secondary">
+              05/03/2025</p>
+          </div>
+          <div>
+            <a href="#" class="text-normal text-white -tracking-1"
+              >
+              BIOS FILKOM UB: Wadah Bakat dan Kreativitas Mahasiswa FILKOM UB</a
+            >
+            <p class="pl-6 text-small text-secondary">
+              04/03/2025</p>
+          </div>
+          <div>
+            <a href="#" class="text-normal text-white -tracking-1"
+              >
+              Tarhib Ramadhan 1446H FILKOM UB: Bulan Al-Qur’an, Bulan Menjaga Hati dan Keluarga</a
+            >
+            <p class="pl-6 text-small text-secondary">
+              03/03/2025</p>
+          </div>
+        </article>
+        <div class="flex justify-center">
+          <a
+            href="#"
+            class="px-5 py-2.5 text-small text-primary bg-white hover:bg-secondary hover:text-white duration-300 ease-in"
+            >Berita Lainnya</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="lg:px-[8%] md:px-4 px-2 my-1 font-roboto">
+      <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+        <article>
+          <div class="pt-4 pb-2.5">
+            <h2
+              class="flex gap-2 p-2.5 text-primary text-3xl font-semibold -tracking-2">
+              <i class="fa-solid fa-suitcase"></i>
+              <span>Lowongan</span>
+            </h2>
+            <div class="my-2 h-[3px] w-full bg-secondary"></div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div>
+              <a href="#" class="text-primary text-smnormal -tracking-2"
+                >PELAKSANAAN REKRUTMEN CAMPUS HIRING BANK JATIM</a
+              >
+              <p class="pl-6 text-primary text-small">19/02/2025</p>
+            </div>
+            <div>
+              <a href="#" class="text-primary text-smnormal -tracking-2"
+                >LOWONGAN ADINS INDONESIA</a
+              >
+              <p class="pl-6 text-primary text-small">
+                25/01/2025</p>
+            </div>
+            <div>
+              <a href="#" class="text-primary text-smnormal -tracking-2"
+                >
+                LOWONGAN PT. RICHEESE</a
+              >
+              <p class="pl-6 text-primary text-small">
+                22/01/2025</p>
+            </div>
+            <div>
+              <a href="#" class="text-primary text-smnormal -tracking-2"
+                >
+                LOWONGAN BANK CAPITAL TBK.</a
+              >
+              <p class="pl-6 text-primary text-small">
+                22/01/2025</p>
+            </div>
+            <div>
+              <a href="#" class="text-primary text-smnormal -tracking-2"
+                >
+                LOWONGAN PT DANAMAS INSAN KREASI ANDALAN (DIKA) – 2</a
+              >
+              <p class="pl-6 text-primary text-small">
+                20/01/2025</p>
+            </div>
+          </div>
+        </article>
+        <article class="bg-primary text-white pb-6">
+          <div class="px-2.5 pt-4 pb-2.5">
+            <h2 class="flex gap-2 p-2.5 text-3xl font-semibold -tracking-2">
+              <i class="fa-solid fa-suitcase"></i>
+              <span>Informasi</span>
+            </h2>
+            <div class="my-2 h-[3px] w-full bg-secondary"></div>
+          </div>
+          <div class="px-2.5 flex flex-col gap-4">
+            <div>
+              <a href="#" class="text-smnormal -tracking-2"
+                >REKRUTMEN TERBUKA DELEGASI MTQ FILKOM 2025</a
+              >
+              <p class="pl-6 text-small">
+                20/03/2025</p>
+            </div>
+            <div>
+              <a href="#" class="text-smnormal -tracking-2"
+                >
+                Informasi Beasiswa Lotte Global Scholarship 2025</a
+              >
+              <p class="pl-6 text-small">
+                19/03/2025</p>
+            </div>
+            <div>
+              <a href="#" class="text-smnormal -tracking-2"
+                >
+                Penerimaan Mahasiswa Baru Magister Ilmu Komputer</a
+              >
+              <p class="pl-6 text-small">
+                04/03/2025</p>
+            </div>
+            <div>
+              <a href="#" class="text-smnormal -tracking-2"
+                >
+                Webinar Pelatihan Series – DPKA UB</a
+              >
+              <p class="pl-6 text-small">
+                04/03/2025</p>
+            </div>
+            <div>
+              <a href="#" class="text-smnormal -tracking-2"
+                >
+                Syarat Pengajuan Cetak Satuan Kegiatan Mahasiswa (SKM)</a
+              >
+              <p class="pl-6 text-small">
+                03/03/2025</p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="pt-4 pb-2.5">
+            <h2
+              class="flex gap-2 p-2.5 text-primary text-3xl font-semibold -tracking-2">
+              <i class="fa-solid fa-suitcase"></i>
+              <span>Event</span>
+            </h2>
+            <div class="my-2 h-[3px] w-full bg-secondary"></div>
+          </div>
+          <div class="flex gap-4 font-archivo">
+            <div class="h-fit bg-primary px-5 py-4 text-white text-center">
+              <p class="text-smnormal -tracking-1">MAR</p>
+              <p class="text-3xl font-bold -tracking-1">21</p>
+              <p class="text-small -tracking-1">2025</p>
+            </div>
+            <div>
+              <div
+                class="flex lg:flex-nowrap flex-wrap items-center gap-4 mb-4">
+                <span
+                  class="flex gap-1 items-center text-smnormal text-primary font-semibold font-archivo-narrow">
+                  <i class="fa-regular fa-clock text-secondary"></i>
+                  <p>13:00 PM</p>
+                </span>
+                <span
+                  class="flex gap-1 uppercase items-center text-smnormal text-primary font-semibold font-archivo-narrow">
+                  <i class="fa-solid fa-location-dot text-secondary"></i>
+                  <p>https://s.ub.ac.id/z9</p>
+                </span>
+              </div>
+              <a
+                href="#"
+                class="text-dark-primary text-normal font-medium mb-4 block -tracking-2"
+                >Kuliah Tamu Series #2 – Mata Kuliah Komunikasi</a
+              >
+              <a
+                href="#"
+                class="text-dark-primary text-normal font-medium mb-4 block -tracking-2"
+                >Publik</a
+              >
+              <p class="text-normal">
+                📢 KULIAH TAMU SERIES#2 WAJIB UNTUK MAHASISWA KOMUNIKASI PUBLIK!
+                📢 Halo, mahasiswa Mata Kuliah Komunikasi Publik! 🚀 Jangan
+                lewatkan kesempatan emas untuk memperdalam keterampilan dalam
+                mendesain presentasi yang menarik dan profesional! Kami
+                menghadirkan Kuliah Tamu Capstone Project Mata Kuliah Komunikasi
+                Publik Series #2 dengan tema: "Crafting Impactful...
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="lg:px-[8%] md:px-4 px-2 my-10 font-roboto">
+      <section class="grid md:grid-cols-3 grid-cols-1 gap-6 items-center">
+        <a href="#" class="flex flex-col gap-2 justify-center p-9">
+          <img
+            src="assets/depart ti.webp"
+            alt="departemen teknik informatika"
+            class="h-24 object-contain hover:animate-zoom-in-out" />
+          <h3 class="text-2xl text-primary text-center -tracking-1">
+            Departemen Teknik Informatika
+          </h3>
+        </a>
+        <div class="font-archivo flex flex-col items-center">
+          <h3 class="text-5xl font-bold -tracking-1 text-center">
+            Departemen &
+            <span class="text-white bg-secondary">Program</span> Studi
+          </h3>
+          <div class="flex items-center mt-6 gap-4 px-2.5">
+            <div class="h-1 w-[24px] bg-tertiary"></div>
+            <p class="whitespace-nowrap text-lg text-dark-600 font-bold">
+              Fakultas Ilmu Komputer
+            </p>
+            <div class="h-1 w-[24px] bg-tertiary"></div>
+          </div>
+        </div>
+        <a href="#" class="flex flex-col gap-2 justify-center p-9">
+          <img
+            src="assets/depart si.png"
+            alt="departemen sistem informasi"
+            class="h-24 object-contain hover:animate-zoom-in-out" />
+          <h3 class="text-2xl text-primary text-center -tracking-1">
+            Departemen Sistem Informasi
+          </h3>
+        </a>
+      </section>
+      <section class="swiper programSwiper h-full w-full overflow-hidden">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="group relative p-1 border-r border-white bg-dark-500 w-full lg:h-[200px] h-[400px]">
+              <a href="#">
+                <div
+                  class="-z-1 w-full h-0 bg-secondary top-0 left-0 group-hover:h-full duration-300"></div>
+                <img
+                  src="assets/ilkom magister.png"
+                  alt="ilmu komputer"
+                  class="absolute top-1/2 left-1/2 -translate-1/2 w-[90%] object-contain aspect-square" />
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="group relative p-1 border-r border-white bg-dark-500 w-full lg:h-[200px] h-[400px]">
+              <a href="#">
+                <div
+                  class="-z-1 w-full h-0 bg-secondary top-0 left-0 group-hover:h-full duration-300"></div>
+                <img
+                  src="assets/infor.png"
+                  alt="teknik informatika"
+                  class="absolute top-1/2 left-1/2 -translate-1/2 w-[90%] object-contain aspect-square" />
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="group relative p-1 border-r border-white bg-dark-500 w-full lg:h-[200px] h-[400px]">
+              <a href="#">
+                <div
+                  class="-z-1 w-full h-0 bg-secondary top-0 left-0 group-hover:h-full duration-300"></div>
+                <img
+                  src="assets/teknik komp.png"
+                  alt="teknik komputer"
+                  class="absolute top-1/2 left-1/2 -translate-1/2 w-[90%] object-contain aspect-square" />
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="group relative p-1 border-r border-white bg-dark-500 w-full lg:h-[200px] h-[400px]">
+              <a href="#">
+                <div
+                  class="-z-1 w-full h-0 bg-secondary top-0 left-0 group-hover:h-full duration-300"></div>
+                <img
+                  src="assets/si.png"
+                  alt="sistem informasi"
+                  class="absolute top-1/2 left-1/2 -translate-1/2 w-[90%] object-contain aspect-square" />
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="group relative p-1 border-r border-white bg-dark-500 w-full lg:h-[200px] h-[400px]">
+              <a href="#">
+                <div
+                  class="-z-1 w-full h-0 bg-secondary top-0 left-0 group-hover:h-full duration-300"></div>
+                <img
+                  src="assets/tekno informasi.png"
+                  alt="teknologi informasi"
+                  class="absolute top-1/2 left-1/2 -translate-1/2 w-[90%] object-contain aspect-square" />
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="group relative p-1 border-r border-white bg-dark-500 w-full lg:h-[200px] h-[400px]">
+              <a href="#">
+                <div
+                  class="-z-1 w-full h-0 bg-secondary top-0 left-0 group-hover:h-full duration-300"></div>
+                <img
+                  src="assets/tekno informasi pendidikan.png"
+                  alt="pendidikan teknologi informasi"
+                  class="absolute top-1/2 left-1/2 -translate-1/2 w-[90%] object-contain aspect-square" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="relative overflow-hidden max-w-screen my-10">
+      <div
+        class="lg:px-[8%] md:px-4 px-2 py-6 font-roboto flex md:flex-row flex-col justify-between items-center bg-[url('/assets/edutech_garden-768x432.jpg')] bg-cover bg-fixed bg-center bg-no-repeat lg:min-h-[500px] min-h-[360px] w-full">
+        <div
+          class="w-full h-full bg-black opacity-60 absolute top-0 left-0"></div>
+        <img
+          src="assets/pak_wayan_Sq.jpg"
+          alt="pak wayan"
+          class="z-[999] lg:size-[360px] size-[200px] bg-cover rounded-full" />
+        <div class="z-[999] text-right">
+          <p class="text-white text-lg font-semibold mb-4">
+            Mewujudkan Fakultas Ilmu Komputer berskala internasional yang
+            berkarakter unggul, menginspirasi, mandiri dan berbudaya
+          </p>
+          <p class="text-normal text-tertiary font-medium">
+            Prof. Ir. Wayan Firdaus Mahmudy, S.Si, M.T., Ph.D
+          </p>
+          <p class="text-small text-tertiary">Dekan Fakultas Ilmu Komputer</p>
+        </div>
+      </div>
+      <div
+        class="rotate-180 absolute bottom-0 left-0 w-full h-full"
+        data-negative="false">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1800 5.8"
+          preserveAspectRatio="none">
+          <path
+            class="fill-black"
+            d="M5.4.4l5.4 5.3L16.5.4l5.4 5.3L27.5.4 33 5.7 38.6.4l5.5 5.4h.1L49.9.4l5.4 5.3L60.9.4l5.5 5.3L72 .4l5.5 5.3L83.1.4l5.4 5.3L94.1.4l5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3L161 .4l5.4 5.3L172 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3L261 .4l5.4 5.3L272 .4l5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3L361 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.6-5.4 5.5 5.3L461 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1L550 .4l5.4 5.3L561 .4l5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2L650 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2L750 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.4h.2L850 .4l5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.4V0H-.2v5.8z"></path>
+        </svg>
+      </div>
+    </section>
+    <section class="lg:px-[8%] md:px-4 px-2 my-10 font-archivo">
+      <div class="flex lg:flex-row flex-col items-center gap-16">
+        <div class="lg:min-w-1/2 min-w-full grid grid-cols-2 gap-6">
+          <div data-target="2"
+            class="_counters p-9 flex flex-col gap-4 text-center shadow-big w-full bg-white">
+            <i class="fa-solid fa-signs-post text-3xl mb-3"></i>
+            <p class="_count text-4xl font-bold text-secondary">0</p>
+            <p class="text-smnormal font-light -tracking-1">Departemen</p>
+          </div>
+          <div data-target="6"
+            class="_counters p-9 flex flex-col gap-4 text-center shadow-big w-full bg-white">
+            <i class="fa-solid fa-layer-group text-3xl mb-3"></i>
+            <p class="_count text-4xl font-bold text-secondary"0></p>
+            <p class="text-smnormal font-light -tracking-1">Program Studi</p>
+          </div>
+          <div data-target="108"
+            class="_counters p-9 flex flex-col gap-4 text-center shadow-big w-full bg-white">
+            <i class="fa-solid fa-user-group text-3xl mb-3"></i>
+            <p class="_count text-4xl font-bold text-secondary">0</p>
+            <p class="text-smnormal font-light -tracking-1">Dosen</p>
+          </div>
+          <div data-target="63"
+            class="_counters p-9 flex flex-col gap-4 text-center shadow-big w-full bg-white">
+            <i class="fa-solid fa-user-group text-3xl mb-3"></i>
+            <p class="_count text-4xl font-bold text-secondary">0</p>
+            <p class="text-smnormal font-light -tracking-1">Staf</p>
+          </div>
+          <div data-target="2"
+            class="_counters p-9 flex flex-col gap-4 text-center shadow-big w-full bg-white">
+            <i class="fa-solid fa-star text-3xl mb-3"></i>
+            <p class="_count text-4xl font-bold text-secondary">0</p>
+            <p class="text-smnormal font-light -tracking-1">Professor</p>
+          </div>
+          <div data-target="34"
+            class="_counters p-9 flex flex-col gap-4 text-center shadow-big w-full bg-white">
+            <i class="fa-solid fa-user text-3xl mb-3"></i>
+            <p class="_count text-4xl font-bold text-secondary">0</p>
+            <p class="text-smnormal font-light -tracking-1">Doktor</p>
+          </div>
+          <div data-target="3800"
+            class="_counters p-9 flex flex-col items-center gap-4 text-center shadow-big w-full bg-white">
+            <i class="fa-solid fa-medal text-3xl mb-3"></i>
+            <span class="flex gap-1 text-4xl text-secondary"> 
+              <p class="_count font-bold whitespace-nowrap">2000</p>
+              <sup>+</sup>
+            </span>
+            <p class="text-smnormal font-light -tracking-1">Mahasiswa Aktif</p>
+          </div>
+          <div data-target="6600"
+          class="_counters p-9 flex flex-col items-center gap-4 text-center shadow-big w-full bg-white">
+          <i
+          class="fa-solid fa-graduation-cap fa-flip-horizontal text-3xl mb-3"></i>
+            <span class="flex text-4xl gap-1 text-secondary">
+              <p class="_count font-bold whitespace-nowrap">5000</p>
+              <sup>+</sup>
+            </span>
+            <p class="text-smnormal font-light -tracking-1">Alumni</p>
+          </div>
+        </div>
+        <article>
+          <div class="pt-4 pb-2.5 w-full">
+            <h2 class="flex items-end md:flex-row flex-col py-2.5 text-3xl font-semibold -tracking-2 text-right">
+              Fakultas Ilmu Komputer
+              <span class="block w-fit ml-1 md:mt-0 mt-1 p-2.5 bg-secondary text-primary">FILKOM</span>
+            </h2>
+            <div class="flex items-center justify-end gap-4">
+              <div class="h-1 w-[48px] bg-tertiary"></div>
+              <p class="whitespace-nowrap text-lg text-dark-600 font-bold">
+                Universitas Brawijaya
+              </p>
+              <div class="h-1 w-[48px] bg-tertiary"></div>
+            </div>
+          </div>
+          <div class="my-6">
+            <p class="text-normal leading-[2.2] text-justify indent-6">
+              Dalam tujuannya untuk mencetak lulusan yang kompeten dalam bidang
+              Teknologi Informasi, Fakultas Ilmu Komputer (FILKOM) Universitas
+              Brawijaya menerapkan kurikulum berbasis kompetensi yang merujuk
+              pada ABET (Accreditation Board for Engineering and Technology).
+            </p>
+            <p class="text-normal leading-[2.2] text-justify indent-6">
+              Didukung dengan tenaga pendidik berkualitas dan sarana prasarana
+              pendukung yang memadai, FILKOM bertujuan untuk menghasilkan
+              lulusan yang berjiwa enterpreneur berbasis pada moral dan etika
+              serta dapat dipercaya sehingga mampu bekerjasama dan memberikan
+              kontribusi di tingkat nasional dan internasional.
+            </p>
+          </div>
+          <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+            <div class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-chevron-right text-primary text-2xl"></i>
+              <p class="text-normal leading-[2.2]">
+                Dosen dan Staf Professional
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-chevron-right text-primary text-2xl"></i>
+              <p class="text-normal leading-[2.2]">
+                Prestasi Akademik dan non Akademik
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-chevron-right text-primary text-2xl"></i>
+              <p class="text-normal leading-[2.2]">
+                Kurikulum merujuk standar Nasional dan Internasional
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-chevron-right text-primary text-2xl"></i>
+              <p class="text-normal leading-[2.2]">Unit kemahasiswaan</p>
+            </div>
+            <div class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-chevron-right text-primary text-2xl"></i>
+              <p class="text-normal leading-[2.2]">
+                Sarana prasarana pembelajaran
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <i
+                class="fa-solid fa-circle-chevron-right text-primary text-2xl"></i>
+              <p class="text-normal leading-[2.2]">Atmosfer pembelajaran</p>
+            </div>
+          </div>
+          <div class="flex justify-end mt-10">
+            <a
+              href="#"
+              class="group relative px-6 py-3 flex gap-4 items-center font-semibold text-smnormal w-fit bg-secondary text-primary hover:text-white duration-300 ease-in">
+              <span
+                class="absolute top-0 left-0 w-full bg-dark-500 h-0 group-hover:h-full duration-200 ease-in"></span>
+              <span class="z-999 flex items-center gap-2">
+                <i class="fa-solid fa-star text-3xl mb-3"></i>
+                <span>Lanjut Baca ..</span>
+              </span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section
+      class="md:block hidden mt-4 border-t-2 border-secondary font-archivo">
+      <div class="grid grid-cols-8">
+        <div class="_collapse _collapse-active relative w-full h-[360px]">
+          <div
+            class="h-full w-full absolute top-0 left-0 bg-linear-to-t from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)]"></div>
+          <img
+            src="assets/collase1.webp"
+            alt="collase 1"
+            class="w-full h-full object-cover object-center" />
+          <a
+            href="#"
+            class="py-3 px-5 absolute top-1/2 left-1/2 -translate-1/2 bg-primary text-white rounded-lg border border-white text-normal -tracking-1 hover:bg-blue-900 duration-300 ease-in"
+            >Lihat fasilitas lengkap</a
+          >
+        </div>
+        <div class="_collapse relative w-full h-[360px]">
+          <div
+            class="h-full w-full absolute top-0 left-0 bg-linear-to-t from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)]"></div>
+          <img
+            src="assets/collase2.webp"
+            alt="collase 1"
+            class="w-full h-full object-cover object-center" />
+          <a
+            href="#"
+            class="py-3 px-5 absolute top-1/2 left-1/2 -translate-1/2 bg-primary text-white rounded-lg border border-white text-normal -tracking-1 hover:bg-blue-900 duration-300 ease-in"
+            >Lihat fasilitas lengkap</a
+          >
+        </div>
+        <div class="_collapse relative w-full h-[360px]">
+          <div
+            class="h-full w-full absolute top-0 left-0 bg-linear-to-t from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)]"></div>
+          <img
+            src="assets/collase3.webp"
+            alt="collase 1"
+            class="w-full h-full object-cover object-center" />
+          <a
+            href="#"
+            class="py-3 px-5 absolute top-1/2 left-1/2 -translate-1/2 bg-primary text-white rounded-lg border border-white text-normal -tracking-1 hover:bg-blue-900 duration-300 ease-in"
+            >Lihat fasilitas lengkap</a
+          >
+        </div>
+        <div class="_collapse relative w-full h-[360px]">
+          <div
+            class="h-full w-full absolute top-0 left-0 bg-linear-to-t from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)]"></div>
+          <img
+            src="assets/collase4.webp"
+            alt="collase 1"
+            class="w-full h-full object-cover object-center" />
+          <a
+            href="#"
+            class="py-3 px-5 absolute top-1/2 left-1/2 -translate-1/2 bg-primary text-white rounded-lg border border-white text-normal -tracking-1 hover:bg-blue-900 duration-300 ease-in"
+            >Lihat fasilitas lengkap</a
+          >
+        </div>
+        <div class="_collapse relative w-full h-[360px]">
+          <div
+            class="h-full w-full absolute top-0 left-0 bg-linear-to-t from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)]"></div>
+          <img
+            src="assets/collase5.webp"
+            alt="collase 1"
+            class="w-full h-full object-cover object-center" />
+          <a
+            href="#"
+            class="py-3 px-5 absolute top-1/2 left-1/2 -translate-1/2 bg-primary text-white rounded-lg border border-white text-normal -tracking-1 hover:bg-blue-900 duration-300 ease-in"
+            >Lihat fasilitas lengkap</a
+          >
+        </div>
+        <div class="_collapse relative w-full h-[360px]">
+          <div
+            class="h-full w-full absolute top-0 left-0 bg-linear-to-t from-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0)]"></div>
+          <img
+            src="assets/collase6.webp"
+            alt="collase 1"
+            class="w-full h-full object-cover object-center" />
+          <a
+            href="#"
+            class="py-3 px-5 absolute top-1/2 left-1/2 -translate-1/2 bg-primary text-white rounded-lg border border-white text-normal -tracking-1 hover:bg-blue-900 duration-300 ease-in"
+            >Lihat fasilitas lengkap</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="lg:px-[8%] md:px-4 px-2 py-8 mt-4 font-archivo bg-primary">
+      <div class="pt-4 pb-2 grid md:grid-cols-5 grid-cols-1 lg:gap-8 gap-4">
+        <div
+          class="group bg-dark-800 border-l-2 border-secondary overflow-hidden">
+          <a href="#" class="p-2.5 flex gap-2 h-[90px]">
+            <i class="fa-regular fa-clone text-white text-5xl"></i>
+            <p
+              class="text-secondary -tracking-1 group-hover:text-white duration-300 ease-in">
+              PPID UB
+            </p>
+          </a>
+        </div>
+        <div
+          class="group bg-dark-800 border-l-2 border-secondary overflow-hidden">
+          <a href="#" class="p-2.5 flex gap-2 h-[90px]">
+            <i class="fa-solid fa-gift text-white text-5xl"></i>
+            <p
+              class="text-secondary -tracking-1 group-hover:text-white duration-300 ease-in">
+              Pengaduan Gratifikasi
+            </p>
+          </a>
+        </div>
+        <div
+          class="group bg-dark-800 border-l-2 border-secondary overflow-hidden">
+          <a href="#" class="p-2.5 flex gap-2 h-[90px]">
+            <i class="fa-solid fa-wheelchair text-white text-5xl"></i>
+            <p
+              class="text-secondary -tracking-1 group-hover:text-white duration-300 ease-in">
+              Pusat Layanan Disabilitas
+            </p>
+          </a>
+        </div>
+        <div
+          class="group bg-dark-800 border-l-2 border-secondary overflow-hidden">
+          <a href="#" class="p-2.5 flex gap-2 h-[90px]">
+            <i
+              class="fa-solid fa-arrow-right-arrow-left text-white text-5xl"></i>
+            <p
+              class="text-secondary -tracking-1 group-hover:text-white duration-300 ease-in">
+              Umpan Balik UB
+            </p>
+          </a>
+        </div>
+        <div
+          class="group bg-dark-800 border-l-2 border-secondary overflow-hidden">
+          <a href="#" class="p-2.5 flex gap-2 h-[90px]">
+            <i class="fa-solid fa-comment-slash text-white text-5xl"></i>
+            <p
+              class="text-secondary -tracking-1 group-hover:text-white duration-300 ease-in">
+              Whistleblowing UB
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="w-full h-1 bg-secondary"></div>
+    <footer class="lg:px-[8%] px-4 pt-12 pb-4 font-roboto bg-primary">
+      <div class="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-4">
+        <div class="p-4 lg:col-span-2 col-span-1 w-full bg-dark-700">
+          <p class="text-white -tracking-1 font-semibold text-lg mb-2">
+            Fakultas Ilmu Komputer (FILKOM)
+          </p>
+          <p class="text-white -tracking-1 font-semibold text-lg mb-6">
+            Universitas Brawijaya
+          </p>
+          <div class="flex items-center justify-center gap-3 mb-10">
+            <div>
+              <a
+                href="#"
+                class="flex justify-center items-center size-10 border-2 border-white rounded-[4px] bg-dark-600 hover:brightness-90 duration-300 ease-in">
+                <i class="text-white text-xl fa-brands fa-instagram"></i>
+              </a>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="flex justify-center items-center size-10 border-2 border-white rounded-[4px] bg-[#2ca5e0] hover:brightness-90 duration-300 ease-in">
+                <i class="text-white text-xl fa-brands fa-telegram"></i>
+              </a>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="flex justify-center items-center size-10 border-2 border-white rounded-[4px] bg-black hover:brightness-90 duration-300 ease-in">
+                <i class="text-white text-lg fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="flex justify-center items-center size-10 border-2 border-white rounded-[4px] bg-[#cd201f] hover:brightness-90 duration-300 ease-in">
+                <i class="text-white text-lg fa-brands fa-youtube"></i>
+              </a>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="flex justify-center items-center size-10 border-2 border-white rounded-[4px] bg-[#3b5998] hover:brightness-90 duration-300 ease-in">
+                <i class="text-white text-lg fa-brands fa-facebook"></i>
+              </a>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="flex justify-center items-center size-10 border-2 border-white rounded-[4px] bg-[#69727d] hover:brightness-90 duration-300 ease-in">
+                <i class="text-white text-lg fa-brands fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <ul class="mb-4">
+              <li
+                class="text-normal font-semibold -tracking-1 text-secondary uppercase leading-[2]">
+                Address
+              </li>
+              <li
+                class="text-normal font-semibold -tracking-1 text-white leading-[1.2]">
+                Jl. Veteran, Ketawanggede, Lowokwaru, Kota Malang, Jawa Timur,
+                Indonesia - 65145
+              </li>
+            </ul>
+            <ul class="mb-4">
+              <li
+                class="text-normal font-semibold -tracking-1 text-secondary uppercase leading-[2]">
+                PHONE
+              </li>
+              <li
+                class="text-normal font-semibold -tracking-1 text-white leading-[1.2]">
+                Telp. 0341-577911
+              </li>
+            </ul>
+            <ul class="mb-4">
+              <li
+                class="text-normal font-semibold -tracking-1 text-secondary uppercase leading-[2]">
+                FAX
+              </li>
+              <li
+                class="text-normal font-semibold -tracking-1 text-white leading-[1.2]">
+                Fax (0341) 577-911
+              </li>
+            </ul>
+            <ul class="mb-4">
+              <li
+                class="text-normal font-semibold -tracking-1 text-secondary uppercase leading-[2]">
+                email
+              </li>
+              <li
+                class="text-normal font-semibold -tracking-1 text-white leading-[1.2]">
+                filkom@ub.ac.id
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full">
+          <p class="text-white -tracking-2 text-lg mb-4">
+            Departemen dan Program Studi
+          </p>
+          <ul class="list-disc ml-4 font-archivo">
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in"
+                >Departemen Teknik Informatika</a
+              >
+            </li>
+            <ul class="list-[circle] ml-4">
+              <li class="marker:text-tertiary-200">
+                <a
+                  href="#"
+                  class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in"
+                  >Program Studi Magister Ilmu Komputer</a
+                >
+              </li>
+              <li class="marker:text-tertiary-200">
+                <a
+                  href="#"
+                  class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                  Program Studi Sarjana Teknik Informatika</a
+                >
+              </li>
+              <li class="marker:text-tertiary-200">
+                <a
+                  href="#"
+                  class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                  Program Studi Sarjana Teknik Komputer</a
+                >
+              </li>
+            </ul>
+          </ul>
+          <ul class="list-disc ml-4 font-archivo">
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in"
+                >Departemen Sistem Informasi</a
+              >
+            </li>
+            <ul class="list-[circle] ml-4">
+              <li class="marker:text-tertiary-200">
+                <a
+                  href="#"
+                  class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                  Program Studi Sarjana Sistem Informasi</a
+                >
+              </li>
+              <li class="marker:text-tertiary-200">
+                <a
+                  href="#"
+                  class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                  Program Studi Sarjana Teknologi Informasi</a
+                >
+              </li>
+              <li class="marker:text-tertiary-200">
+                <a
+                  href="#"
+                  class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                  Program Studi Sarjana Pendidikan Teknologi Informasi</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
+        <div class="w-full">
+          <p class="text-white -tracking-2 text-lg mb-4">Laboratorium</p>
+          <ul class="list-disc ml-4 font-archivo">
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in"
+                >Laboratorium Jaringan Berbasis Informasi</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Laboratorium Media Game dan Mobile</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Laboratorium Robotika dan Sistem Tertanam</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Laboratorium Rekayasa Perangkat Lunak</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Laboratorium Sistem Cerdas</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Laboratorium Sistem Informasi</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Laboratorium Pembelajaran</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Laboratorium Teknologi Pembelajaran</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="w-full">
+          <p class="text-white -tracking-2 text-lg mb-4">Mahasiswa</p>
+          <ul class="list-disc ml-4 font-archivo">
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in"
+                >Badan Eksekutif Mahasiswa (BEM)</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Dewan Perwakilan Mahasiswa (DPM)</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Display</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Raion</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                K-risma</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Optiik</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Poros</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Bios</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                LKI-Amd</a
+              >
+            </li>
+          </ul>
+          <p class="text-white -tracking-2 text-lg my-4">Direktori</p>
+          <ul class="list-disc ml-4 font-archivo">
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in"
+                >Jurnal Mahasiswa</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                E-complaint UB</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Blog Dosen</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Blog Staff</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Beasiswa Online UB</a
+              >
+            </li>
+            <li class="marker:text-tertiary-200">
+              <a
+                href="#"
+                class="text-tertiary-200 text-[13px] leading-[2] hover:text-[#eaeaea] duration-300 ease-in">
+                Job Placement Center UB</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="bg-black w-full h-[80px] border-b-[6px] border-secondary">
+      <div class="text-center p-4 text-tertiary-200 font-bold text-small">
+        <p>© 2021. All Rights Reserved. Design by PSIK FILKOM UB</p>
+      </div>
+    </div>
+
+    <!-- Swipers JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/swiper.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

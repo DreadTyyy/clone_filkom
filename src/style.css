@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-primary: #01182d;
+  --color-primary: #012443;
+  --color-secondary: #ec831e;
+  --color-tertiary: #e5e5e5;
+  --color-tertiary-200: #8d9097;
+  --color-quartenary: #383f48;
+  --color-redbrown: #9e1030;
+  --color-dark-800: #000109;
+  --color-dark-700: #000f20;
+  --color-dark-600: #414141;
+  --color-dark-500: #696969;
+  --shadow-sm: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  --shadow-big: 0px 28px 40px 0px rgba(0,0,0,0.1);
+  --font-roboto: "Roboto";
+  --font-helvetica: "Helvetica", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+  --font-archivo-narrow: "Archivo Narrow", sans-serif;
+  --font-archivo: "Archivo", sans-serif;
+  --text-smnormal: 15px;
+  --text-normal: 14px;
+  --text-small: 12px;
+  --tracking-1: 0.03em;
+  --tracking-2: 0.05em;
+
+  --animate-zoom-in-out: zoomInOut 1s ease-in-out infinite;
+  @keyframes zoomInOut {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+}
